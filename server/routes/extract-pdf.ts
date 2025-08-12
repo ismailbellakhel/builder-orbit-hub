@@ -1,6 +1,5 @@
 import { RequestHandler } from "express";
 import multer from "multer";
-import pdf from "pdf-parse";
 
 export interface ExtractedContent {
   title: string;
