@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        magazine: {
+          hero: "hsl(var(--magazine-hero))",
+          accent: "hsl(var(--magazine-accent))",
+          neutral: "hsl(var(--magazine-neutral))",
+          surface: "hsl(var(--magazine-surface))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
