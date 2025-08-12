@@ -10,3 +10,22 @@
 export interface DemoResponse {
   message: string;
 }
+
+/**
+ * Content extraction types
+ */
+export interface ExtractUrlRequest {
+  url: string;
+}
+
+export interface ExtractedContent {
+  title: string;
+  content: string;
+  images: string[];
+  metadata?: {
+    author?: string;
+    publishDate?: string;
+    wordCount?: number;
+    pages?: number;
+  };
+}
