@@ -35,9 +35,12 @@ const NotFound = () => {
           <div className="text-8xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
             404
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Page not found</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            Page not found
+          </h1>
           <p className="text-gray-600 mb-8">
-            Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.
+            Sorry, we couldn't find the page you're looking for. It might have
+            been moved or doesn't exist.
           </p>
           <Link to="/">
             <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">

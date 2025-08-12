@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { BookOpen, ArrowLeft, MessageCircle } from "lucide-react";
 
@@ -9,7 +15,11 @@ interface PlaceholderPageProps {
   comingSoon?: boolean;
 }
 
-export default function PlaceholderPage({ title, description, comingSoon = true }: PlaceholderPageProps) {
+export default function PlaceholderPage({
+  title,
+  description,
+  comingSoon = true,
+}: PlaceholderPageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-purple-50/20 to-indigo-50/30">
       {/* Header */}
@@ -24,11 +34,31 @@ export default function PlaceholderPage({ title, description, comingSoon = true 
             </span>
           </Link>
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="/features" className="text-gray-600 hover:text-purple-600 transition-colors">Features</Link>
-            <Link to="/templates" className="text-gray-600 hover:text-purple-600 transition-colors">Templates</Link>
-            <Link to="/pricing" className="text-gray-600 hover:text-purple-600 transition-colors">Pricing</Link>
-            <Button variant="outline" size="sm">Sign In</Button>
-            <Button size="sm" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+            <Link
+              to="/features"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Features
+            </Link>
+            <Link
+              to="/templates"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Templates
+            </Link>
+            <Link
+              to="/pricing"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Pricing
+            </Link>
+            <Button variant="outline" size="sm">
+              Sign In
+            </Button>
+            <Button
+              size="sm"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+            >
               Start Creating
             </Button>
           </div>
@@ -48,17 +78,21 @@ export default function PlaceholderPage({ title, description, comingSoon = true 
                 {description}
               </CardDescription>
             </CardHeader>
-            
+
             <CardContent className="pt-0">
               {comingSoon && (
                 <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg p-6 mb-6">
-                  <h3 className="font-semibold text-purple-900 mb-2">Coming Soon!</h3>
+                  <h3 className="font-semibold text-purple-900 mb-2">
+                    Coming Soon!
+                  </h3>
                   <p className="text-purple-700 text-sm">
-                    This feature is currently in development. Continue prompting to help us build out this page with the specific content and functionality you need.
+                    This feature is currently in development. Continue prompting
+                    to help us build out this page with the specific content and
+                    functionality you need.
                   </p>
                 </div>
               )}
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/">
                   <Button variant="outline" className="w-full sm:w-auto">
@@ -73,9 +107,12 @@ export default function PlaceholderPage({ title, description, comingSoon = true 
               </div>
             </CardContent>
           </Card>
-          
+
           <div className="mt-8 text-sm text-gray-500">
-            <p>Need this page built out? Just continue the conversation and describe what you'd like to see here!</p>
+            <p>
+              Need this page built out? Just continue the conversation and
+              describe what you'd like to see here!
+            </p>
           </div>
         </div>
       </main>

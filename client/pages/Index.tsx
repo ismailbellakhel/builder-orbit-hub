@@ -1,18 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { 
-  BookOpen, 
-  Sparkles, 
-  Palette, 
-  Share2, 
-  Play, 
-  Star, 
-  Users, 
+import {
+  BookOpen,
+  Sparkles,
+  Palette,
+  Share2,
+  Play,
+  Star,
+  Users,
   Zap,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 export default function Index() {
@@ -30,12 +36,37 @@ export default function Index() {
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="/features" className="text-gray-600 hover:text-purple-600 transition-colors">Features</Link>
-            <Link to="/templates" className="text-gray-600 hover:text-purple-600 transition-colors">Templates</Link>
-            <Link to="/extract" className="text-gray-600 hover:text-purple-600 transition-colors">Extract Content</Link>
-            <Link to="/pricing" className="text-gray-600 hover:text-purple-600 transition-colors">Pricing</Link>
-            <Button variant="outline" size="sm">Sign In</Button>
-            <Button size="sm" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
+            <Link
+              to="/features"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Features
+            </Link>
+            <Link
+              to="/templates"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Templates
+            </Link>
+            <Link
+              to="/extract"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Extract Content
+            </Link>
+            <Link
+              to="/pricing"
+              className="text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Pricing
+            </Link>
+            <Button variant="outline" size="sm">
+              Sign In
+            </Button>
+            <Button
+              size="sm"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+            >
               Start Creating
             </Button>
           </div>
@@ -45,11 +76,14 @@ export default function Index() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto">
-          <Badge variant="secondary" className="mb-6 bg-purple-100 text-purple-700 hover:bg-purple-200">
+          <Badge
+            variant="secondary"
+            className="mb-6 bg-purple-100 text-purple-700 hover:bg-purple-200"
+          >
             <Sparkles className="w-3 h-3 mr-1" />
             AI-Powered Magazine Creation
           </Badge>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 bg-clip-text text-transparent leading-tight">
             Create Stunning
             <br />
@@ -57,14 +91,18 @@ export default function Index() {
               Digital Magazines
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Transform your content into beautiful, interactive digital magazines with our intuitive drag-and-drop editor. 
-            No design experience required.
+            Transform your content into beautiful, interactive digital magazines
+            with our intuitive drag-and-drop editor. No design experience
+            required.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-lg px-8 py-6">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-lg px-8 py-6"
+            >
               <Play className="w-5 h-5 mr-2" />
               Start Creating Free
             </Button>
@@ -76,13 +114,17 @@ export default function Index() {
 
           <div className="mb-12">
             <Link to="/extract">
-              <Button variant="secondary" size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-emerald-50 to-blue-50 hover:from-emerald-100 hover:to-blue-100 text-gray-700 border-emerald-200">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="text-lg px-8 py-6 bg-gradient-to-r from-emerald-50 to-blue-50 hover:from-emerald-100 hover:to-blue-100 text-gray-700 border-emerald-200"
+              >
                 <Zap className="w-5 h-5 mr-2" />
                 Extract Content from Web & PDF
               </Button>
             </Link>
           </div>
-          
+
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
             <div className="flex items-center">
@@ -106,13 +148,16 @@ export default function Index() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Everything you need to create
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent"> amazing magazines</span>
+            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              {" "}
+              amazing magazines
+            </span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Powerful tools and beautiful templates to bring your vision to life
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur">
             <CardHeader>
@@ -121,11 +166,12 @@ export default function Index() {
               </div>
               <CardTitle>Drag & Drop Editor</CardTitle>
               <CardDescription>
-                Intuitive visual editor with real-time preview. Create stunning layouts without any design experience.
+                Intuitive visual editor with real-time preview. Create stunning
+                layouts without any design experience.
               </CardDescription>
             </CardHeader>
           </Card>
-          
+
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur">
             <CardHeader>
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
@@ -133,11 +179,12 @@ export default function Index() {
               </div>
               <CardTitle>Premium Templates</CardTitle>
               <CardDescription>
-                200+ professionally designed templates for every industry and style. Start with a template or build from scratch.
+                200+ professionally designed templates for every industry and
+                style. Start with a template or build from scratch.
               </CardDescription>
             </CardHeader>
           </Card>
-          
+
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur">
             <CardHeader>
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
@@ -145,11 +192,12 @@ export default function Index() {
               </div>
               <CardTitle>Instant Publishing</CardTitle>
               <CardDescription>
-                Publish and share your magazines instantly. Generate shareable links, embed codes, or export as PDF.
+                Publish and share your magazines instantly. Generate shareable
+                links, embed codes, or export as PDF.
               </CardDescription>
             </CardHeader>
           </Card>
-          
+
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur">
             <CardHeader>
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
@@ -157,11 +205,12 @@ export default function Index() {
               </div>
               <CardTitle>AI-Powered Content</CardTitle>
               <CardDescription>
-                Generate content suggestions, optimize layouts, and enhance images with our built-in AI tools.
+                Generate content suggestions, optimize layouts, and enhance
+                images with our built-in AI tools.
               </CardDescription>
             </CardHeader>
           </Card>
-          
+
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur">
             <CardHeader>
               <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-500 rounded-lg flex items-center justify-center mb-4">
@@ -169,11 +218,12 @@ export default function Index() {
               </div>
               <CardTitle>Team Collaboration</CardTitle>
               <CardDescription>
-                Work together with your team. Real-time editing, comments, and approval workflows included.
+                Work together with your team. Real-time editing, comments, and
+                approval workflows included.
               </CardDescription>
             </CardHeader>
           </Card>
-          
+
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur">
             <CardHeader>
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-yellow-500 rounded-lg flex items-center justify-center mb-4">
@@ -181,7 +231,8 @@ export default function Index() {
               </div>
               <CardTitle>Analytics & Insights</CardTitle>
               <CardDescription>
-                Track reader engagement, view statistics, and optimize your content with detailed analytics.
+                Track reader engagement, view statistics, and optimize your
+                content with detailed analytics.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -197,19 +248,28 @@ export default function Index() {
               Ready to create your first magazine?
             </h2>
             <p className="text-purple-100 mb-8 max-w-2xl mx-auto text-lg">
-              Join thousands of creators who have already published amazing digital magazines. Start for free today.
+              Join thousands of creators who have already published amazing
+              digital magazines. Start for free today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-purple-50 text-lg px-8 py-6">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-purple-600 hover:bg-purple-50 text-lg px-8 py-6"
+              >
                 <Play className="w-5 h-5 mr-2" />
                 Start Creating Now
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
+              >
                 View Pricing
               </Button>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-6 text-sm text-purple-100">
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 mr-2" />
@@ -239,49 +299,149 @@ export default function Index() {
               <span className="font-bold text-gray-900">MagCraft</span>
             </div>
             <p className="text-gray-600 text-sm">
-              The easiest way to create stunning digital magazines. Loved by creators worldwide.
+              The easiest way to create stunning digital magazines. Loved by
+              creators worldwide.
             </p>
           </div>
-          
+
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><Link to="/features" className="hover:text-purple-600 transition-colors">Features</Link></li>
-              <li><Link to="/templates" className="hover:text-purple-600 transition-colors">Templates</Link></li>
-              <li><Link to="/pricing" className="hover:text-purple-600 transition-colors">Pricing</Link></li>
-              <li><Link to="/examples" className="hover:text-purple-600 transition-colors">Examples</Link></li>
+              <li>
+                <Link
+                  to="/features"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/templates"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Templates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pricing"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/examples"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Examples
+                </Link>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><Link to="/help" className="hover:text-purple-600 transition-colors">Help Center</Link></li>
-              <li><Link to="/tutorials" className="hover:text-purple-600 transition-colors">Tutorials</Link></li>
-              <li><Link to="/blog" className="hover:text-purple-600 transition-colors">Blog</Link></li>
-              <li><Link to="/community" className="hover:text-purple-600 transition-colors">Community</Link></li>
+              <li>
+                <Link
+                  to="/help"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tutorials"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/community"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Community
+                </Link>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><Link to="/about" className="hover:text-purple-600 transition-colors">About</Link></li>
-              <li><Link to="/contact" className="hover:text-purple-600 transition-colors">Contact</Link></li>
-              <li><Link to="/careers" className="hover:text-purple-600 transition-colors">Careers</Link></li>
-              <li><Link to="/privacy" className="hover:text-purple-600 transition-colors">Privacy</Link></li>
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/careers"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacy"
+                  className="hover:text-purple-600 transition-colors"
+                >
+                  Privacy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-600">
             © 2024 MagCraft. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/terms" className="text-sm text-gray-600 hover:text-purple-600 transition-colors">Terms</Link>
-            <Link to="/privacy" className="text-sm text-gray-600 hover:text-purple-600 transition-colors">Privacy</Link>
-            <Link to="/cookies" className="text-sm text-gray-600 hover:text-purple-600 transition-colors">Cookies</Link>
+            <Link
+              to="/terms"
+              className="text-sm text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Terms
+            </Link>
+            <Link
+              to="/privacy"
+              className="text-sm text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link
+              to="/cookies"
+              className="text-sm text-gray-600 hover:text-purple-600 transition-colors"
+            >
+              Cookies
+            </Link>
           </div>
         </div>
       </footer>

@@ -42,8 +42,8 @@ export const handleExtractRss: RequestHandler = async (req, res) => {
     const parser = new Parser({
       timeout: 10000,
       headers: {
-        'User-Agent': 'MagCraft RSS Reader 1.0'
-      }
+        "User-Agent": "MagCraft RSS Reader 1.0",
+      },
     });
 
     // Parse the RSS feed
@@ -52,52 +52,55 @@ export const handleExtractRss: RequestHandler = async (req, res) => {
     // Process feed items
     const articles: RssArticle[] = feed.items
       .slice(0, Math.min(maxItems, 50)) // Limit to max 50 items
-      .map(item => {
+      .map((item) => {
         // Extract content (try different content fields)
-        let content = item.content || 
-                     item['content:encoded'] || 
-                     item.description || 
-                     item.summary || 
-                     '';
+        let content =
+          item.content ||
+          item["content:encoded"] ||
+          item.description ||
+          item.summary ||
+          "";
 
         // Clean HTML tags from content if present
-        content = content.replace(/<[^>]*>/g, '').trim();
+        content = content.replace(/<[^>]*>/g, "").trim();
 
         // Extract categories
         const categories = item.categories || [];
 
         return {
-          title: item.title || 'Untitled',
+          title: item.title || "Untitled",
           content,
-          link: item.link || '',
-          pubDate: item.pubDate ? new Date(item.pubDate).toLocaleDateString() : undefined,
+          link: item.link || "",
+          pubDate: item.pubDate
+            ? new Date(item.pubDate).toLocaleDateString()
+            : undefined,
           author: item.creator || item.author || undefined,
           categories: Array.isArray(categories) ? categories : [],
-          description: item.description?.replace(/<[^>]*>/g, '').trim() || undefined
+          description:
+            item.description?.replace(/<[^>]*>/g, "").trim() || undefined,
         };
       });
 
     const extractedContent: RssExtractedContent = {
-      feedTitle: feed.title || 'RSS Feed',
-      feedDescription: feed.description?.replace(/<[^>]*>/g, '').trim(),
+      feedTitle: feed.title || "RSS Feed",
+      feedDescription: feed.description?.replace(/<[^>]*>/g, "").trim(),
       feedLink: feed.link,
       articles,
-      totalItems: feed.items.length
+      totalItems: feed.items.length,
     };
 
     res.json(extractedContent);
-
   } catch (error) {
     console.error("RSS extraction error:", error);
-    
+
     if (error instanceof Error) {
-      if (error.message.includes('Invalid RSS')) {
+      if (error.message.includes("Invalid RSS")) {
         return res.status(400).json({ error: "Invalid RSS feed format" });
       }
-      if (error.message.includes('timeout')) {
+      if (error.message.includes("timeout")) {
         return res.status(408).json({ error: "RSS feed request timed out" });
       }
-      if (error.message.includes('ENOTFOUND')) {
+      if (error.message.includes("ENOTFOUND")) {
         return res.status(404).json({ error: "RSS feed not found" });
       }
     }
