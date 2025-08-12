@@ -62,7 +62,7 @@ export default function Index() {
             No design experience required.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button size="lg" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-lg px-8 py-6">
               <Play className="w-5 h-5 mr-2" />
               Start Creating Free
@@ -71,6 +71,15 @@ export default function Index() {
               <BookOpen className="w-5 h-5 mr-2" />
               View Examples
             </Button>
+          </div>
+
+          <div className="mb-12">
+            <Link to="/extract">
+              <Button variant="secondary" size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-emerald-50 to-blue-50 hover:from-emerald-100 hover:to-blue-100 text-gray-700 border-emerald-200">
+                <Zap className="w-5 h-5 mr-2" />
+                Extract Content from Web & PDF
+              </Button>
+            </Link>
           </div>
           
           {/* Stats */}
