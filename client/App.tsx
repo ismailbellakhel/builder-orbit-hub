@@ -21,6 +21,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/extract" element={<ContentExtraction />} />
 
           {/* Main navigation routes */}
           <Route path="/features" element={
