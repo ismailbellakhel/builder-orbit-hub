@@ -32,6 +32,7 @@ export default function Index() {
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/features" className="text-gray-600 hover:text-purple-600 transition-colors">Features</Link>
             <Link to="/templates" className="text-gray-600 hover:text-purple-600 transition-colors">Templates</Link>
+            <Link to="/extract" className="text-gray-600 hover:text-purple-600 transition-colors">Extract Content</Link>
             <Link to="/pricing" className="text-gray-600 hover:text-purple-600 transition-colors">Pricing</Link>
             <Button variant="outline" size="sm">Sign In</Button>
             <Button size="sm" className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
