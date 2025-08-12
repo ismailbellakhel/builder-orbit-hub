@@ -21,5 +21,9 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
+  // Content extraction routes
+  app.post("/api/extract-url", handleExtractUrl);
+  app.post("/api/extract-pdf", uploadMiddleware, handleExtractPdf);
+
   return app;
 }
