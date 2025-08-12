@@ -2,6 +2,8 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleExtractUrl } from "./routes/extract-url";
+import { handleExtractPdf, uploadMiddleware } from "./routes/extract-pdf";
 
 export function createServer() {
   const app = express();
