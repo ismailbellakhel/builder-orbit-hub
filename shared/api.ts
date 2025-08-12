@@ -29,3 +29,29 @@ export interface ExtractedContent {
     pages?: number;
   };
 }
+
+/**
+ * RSS feed extraction types
+ */
+export interface ExtractRssRequest {
+  url: string;
+  maxItems?: number;
+}
+
+export interface RssArticle {
+  title: string;
+  content: string;
+  link: string;
+  pubDate?: string;
+  author?: string;
+  categories?: string[];
+  description?: string;
+}
+
+export interface RssExtractedContent {
+  feedTitle: string;
+  feedDescription?: string;
+  feedLink?: string;
+  articles: RssArticle[];
+  totalItems: number;
+}
